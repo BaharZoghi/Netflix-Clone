@@ -22,7 +22,7 @@ function NavBar() {
       <div className="navbarIconContainer">
         <img
           className="netflixIcon"
-          src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
+          src="https://pngimg.com/uploads/netflix/netflix_PNG11.png"
         />
       </div>
     </div>

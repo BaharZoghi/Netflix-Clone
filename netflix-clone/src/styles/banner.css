@@ -26,13 +26,18 @@
 }
 
 .banner--fadebutton {
-  height: 7.4rem;
+  position: absolute;
+  bottom: 0;
+  height: 7.7rem;
+  width: 100%;
   background-image: linear-gradient(
     180deg,
     transparent,
     rgba(37, 37, 37, 0.61),
     #111
   );
+
+  /* bottom: 0; */
 }
 
 .banner__button {

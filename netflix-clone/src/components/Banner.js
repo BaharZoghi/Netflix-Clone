@@ -15,6 +15,7 @@ function Banner() {
           Math.floor(Math.random() * requests.data.results.length - 1)
         ]
       );
+      return requests;
     };
     fetchData();
   }, []);

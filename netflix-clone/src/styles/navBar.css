@@ -10,14 +10,14 @@
   transition: all 0.5s;
 }
 .nav__color {
-  background-color: #111;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .navbarIconContainer {
   display: flex;
 }
 .netflixIcon {
   position: fixed;
-  top: 10px;
+  top: 0;
   left: 0;
   width: 200px;
   padding-left: 20px;

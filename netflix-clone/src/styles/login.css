@@ -1,0 +1,17 @@
+.loginContainer {
+  position: relative;
+  height: 100vh;
+}
+.container__background {
+  background-image: url("https://cdn.tmobile.com/content/dam/t-mobile/ntm/specific-use/netflix/bg/new/1182202-bg-full-netflix-grid-v2.desktop.jpg");
+  height: 100vh;
+  opacity: 0.4;
+}
+
+.netflix__logo {
+  position: fixed;
+  width: 150px;
+  left: 20px;
+  top: 0;
+  z-index: 1;
+}

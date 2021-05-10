@@ -8,6 +8,8 @@ function Login() {
         className="netflix__logo"
         src="https://pngimg.com/uploads/netflix/netflix_PNG11.png"
       />
+      <button className="loginButton">Sign In</button>
+      <div className="loginGradient" />
       <div className="container__background"></div>
     </div>
   );

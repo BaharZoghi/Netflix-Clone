@@ -47,3 +47,68 @@
     rgba(0, 0, 0, 0.8) 100%
   );
 }
+
+.login__body {
+  position: absolute;
+  top: 30%;
+  /* margin-left: auto; */
+  right: 0;
+  left: 0;
+  /* margin-right: 0; */
+  text-align: center;
+  /* right: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; */
+  z-index: 1;
+  padding: 20px;
+  color: white;
+}
+
+.login__body > h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.login__body > h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.login__body > h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.login__input {
+  position: relative;
+}
+
+.login__input > form > input {
+  padding: 10px;
+  outline-width: 0;
+  width: 30%;
+  border: none;
+  height: 30px;
+}
+
+.login__input > form > button {
+  position: absolute;
+  top: 0px;
+  padding: 16px 20px;
+  outline: 0;
+  width: 15%;
+  line-height: 18px;
+  /* height: 30px; */
+  border: none;
+  background-color: #e50914;
+  /* background-color: white; */
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}

@@ -86,7 +86,7 @@
 }
 
 .login__input {
-  position: relative;
+  margin-top: 20px;
 }
 
 .login__input > form > input {
@@ -98,7 +98,6 @@
 }
 
 .login__input > form > button {
-  position: absolute;
   top: 0px;
   padding: 16px 20px;
   outline: 0;

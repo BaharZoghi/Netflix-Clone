@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/login.css";
+import SignIn from "./SignIn";
 
 function Login() {
   const [signIn, setSignIn] = useState(false);
@@ -15,17 +16,29 @@ function Login() {
       <div className="loginGradient" />
       <div className="container__background"></div>
       <div className="login__body">
-        <h1>Unlimited films, TV programmes and more.</h1>
-        <h2>Whatch anywhere, cancel anytime!</h2>
-        <h3>
-          Ready to watch? Enter your email to create or restart your membership.
-        </h3>
-        <div className="login__input">
-          <form>
-            <input placeholder="Email Address..." type="email" />
-            <button className="login__getStarted">GET STARTED</button>
-          </form>
-        </div>
+        {signIn ? (
+          <SignIn />
+        ) : (
+          <>
+            <h1>Unlimited films, TV programmes and more.</h1>
+            <h2>Whatch anywhere, cancel anytime!</h2>
+            <h3>
+              Ready to watch? Enter your email to create or restart your
+              membership.
+            </h3>
+            <div className="login__input">
+              <form>
+                <input placeholder="Email Address..." type="email" />
+                <button
+                  onClick={() => setSignIn(true)}
+                  className="login__getStarted"
+                >
+                  GET STARTED
+                </button>
+              </form>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

@@ -9,13 +9,15 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    auth.onAuthStateChanged((userAuth) => {
+    const unSubscribe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
         //login
+        console.log(userAuth);
       } else {
         //logout
       }
     });
+    return unSubscribe;
   }, []);
   return (
     <div className="App">

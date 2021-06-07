@@ -26,7 +26,7 @@ function App() {
         );
       } else {
         //logout
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     return unSubscribe;

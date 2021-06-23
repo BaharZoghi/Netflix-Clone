@@ -27,8 +27,12 @@ function Login() {
               membership.
             </h3>
             <div className="login__input">
-              <form>
-                <input placeholder="Email Address..." type="email" />
+              <form className="login__formLogin">
+                <input
+                  className="login__getInput"
+                  placeholder="Email Address..."
+                  type="email"
+                />
                 <button
                   onClick={() => setSignIn(true)}
                   className="login__getStarted"

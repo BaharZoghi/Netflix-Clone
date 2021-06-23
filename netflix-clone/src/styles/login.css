@@ -111,3 +111,35 @@
   cursor: pointer;
   font-weight: 600;
 }
+
+.login__formLogin {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 928px) {
+  .login__getStarted {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 828px) {
+  .login__input > form > input {
+    grid-row-start: 1;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .login__input > form > button {
+    grid-row-start: 2;
+    width: 30%;
+  }
+  .login__formLogin {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px;
+    justify-items: center;
+    row-gap: 20px;
+  }
+}

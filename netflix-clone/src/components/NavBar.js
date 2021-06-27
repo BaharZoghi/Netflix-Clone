@@ -5,6 +5,7 @@ import AssignmentIcon from "@material-ui/icons/Assignment";
 import Avatar from "@material-ui/core/Avatar";
 import { makeStyles } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
+import { useSelector } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   green: {
@@ -23,6 +24,7 @@ function NavBar() {
   const classes = useStyles();
   const history = useHistory();
   const [show, setShow] = useState(false);
+  const isSubscribed = useSelector(state=> state.user.user.role);
 
   const navBarTransition = () => {
     if (window.scrollY > 50) {
@@ -41,7 +43,7 @@ function NavBar() {
     <div className={`navBarContainer ${show && "nav__color"}`}>
       <div className="navbarIconContainer">
         <img
-          onClick={() => history.push("/")}
+          onClick={() => isSubscribed && history.push("/")}
           className="netflixIcon"
           src="https://pngimg.com/uploads/netflix/netflix_PNG11.png"
         />

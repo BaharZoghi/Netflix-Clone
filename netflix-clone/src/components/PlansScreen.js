@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "../features/counter/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { login, selectUser } from "../features/counter/userSlice";
 import db from "../firebase";
 import "../styles/plansScreen.css";
 import { loadStripe } from "@stripe/stripe-js";
 
+
 function PlansScreen() {
-  const [products, setProducts] = useState([]);
   const user = useSelector(selectUser);
+  const dispatch= useDispatch();
+  const [products, setProducts] = useState([]);
   const [subscription, setSubscription] = useState(null);
 
   useEffect(() => {
@@ -26,7 +28,13 @@ function PlansScreen() {
       });
   }, [user.uid]);
 
-  console.log("Subscription", subscription);
+  useEffect(()=>{
+    if(subscription){
+      const tempRole=user;
+      dispatch(login({...tempRole,role: subscription.role}))
+    }
+  }, [subscription])
+
 
   const loadCheckout = async (priceId) => {
     const docRef = await db

@@ -133,6 +133,7 @@
   .login__input > form > button {
     grid-row-start: 2;
     width: 30%;
+    border-radius: 4px;
   }
   .login__formLogin {
     width: 100%;
